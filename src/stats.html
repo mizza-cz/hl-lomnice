@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'HC Lomnice n. Popelkou'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+
+        <main class="container pb-20 pt-10">
+            <div class="mb-10 flex flex-wrap items-center justify-between gap-6 md:bg-grey-60/25 md:p-8 lg:px-10">
+                <h1 class="text-3xl font-bold uppercase lg:text-4xl">Statistiky A-tým 2023/2024</h1>
+                <form id="stats-form" method="GET">
+                    <select class="custom-select min-w-[150px]" name="season" id="season" onchange="document.querySelector('#stats-form').submit()">
+                        <option value="2024">2023/2024</option>
+                        <option value="2023">2022/2023</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+                <div class="lg:col-span-2">
+                    <!-- <p class="notice w-max max-w-full">Nebyly nalezeny žádné statistiky.</p> -->
+
+                    <div class="flex flex-col gap-10">
+                        <div>
+                            <h3 class="mb-6 text-2xl font-bold uppercase text-secondary">Brankáři</h3>
+                            <div class="overflow-x-auto">
+                                <table class="styled">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th class="text-left">Jméno</th>
+                                            <th>Min</th>
+                                            <th>Stř</th>
+                                            <th>Ink</th>
+                                            <th>Zás</th>
+                                            <th>Úsp</th>
+                                            <th>A</th>
+                                            <th>TM</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @@for(i = 1; i < 3; i++) {
+                                        <tr>
+                                            <td class="text-center">`+i+`</td>
+                                            <td><a class="link-underline link-underline-normal" href="player.html">Dlouhé jméno</a></td>
+                                            <td class="text-center">120</td>
+                                            <td class="text-center">20</td>
+                                            <td class="text-center">5</td>
+                                            <td class="text-center">12</td>
+                                            <td class="text-center">90%</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">2</td>
+                                        </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="mb-6 text-2xl font-bold uppercase text-secondary">Hráči v poli</h3>
+                            <div class="overflow-x-auto">
+                                <table class="styled">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th class="text-left">Jméno</th>
+                                            <th>G</th>
+                                            <th>A</th>
+                                            <th>Stř</th>
+                                            <th>B</th>
+                                            <th>+/-</th>
+                                            <th>TM</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @@for(i = 1; i < 3; i++) {
+                                        <tr>
+                                            <td class="text-center">`+i+`</td>
+                                            <td><a class="link-underline link-underline-normal" href="player.html">Dlouhé jméno</a></td>
+                                            <td class="text-center">4</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">8</td>
+                                            <td class="text-center">7</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">10</td>
+                                        </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-10 lg:col-span-1">
+                    @@include('./components/submenu.html', { 'name': 'A-tým', 'links': ['Soupiska', 'Realizační tým', 'Zápasy', 'Tabulka',
+                    'Statistiky']}) @@include('./components/more-articles.html')
+                </div>
+            </div>
+        </main>
+
+        @@include('./components/footer.html')
+    </body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+    @font-face {
+        font-family: 'Roboto';
+        src: url('/dist/font/Roboto-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Rajdhani';
+        src: url('/dist/font/Rajdhani-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+    }
+</style>
+
+<link rel="stylesheet" type="text/css" href="/dist/css/style.css" />
+<script defer src="/dist/js/main.js"></script>
+<script defer src="/dist/js/cookie-consent-config.js"></script>
+<script defer src="/dist/js/cookie-consent.js"></script>
+<script defer src="/dist/js/cookie-consent-social.js" type="text/plain" data-cookiecategory="social"></script>
+
+<title>HC Lomnice n. Popelkou</title>
+
+    </head>
+    <body>
+        <header class="sticky top-0 z-50">
+    <div class="bg-secondary">
+        <ul class="container hidden py-4 text-white xl:flex xl:items-center xl:justify-end xl:gap-4">
+            <li>
+                <a href="https://rozpis.hclomnice.cz/" target="_blank" class="block"> Rozpis ledu </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=ehaErII8Gqg" target="_blank" class="block"> Webkamera</a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/hclomnice.cz" target="_blank" class="block"> Facebook</a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/hc_lomnice1920" target="_blank" class="block"> Instagram</a>
+            </li>
+            <li>
+                <a href="https://eu.zonerama.com/HCLomnice" target="_blank" class="block">Zonerama </a>
+            </li>
+        </ul>
+    </div>
+    <div class="bg-primary">
+        <div class="container relative flex items-center justify-between py-3 xl:py-0">
+            <a href="index.html" class="z-100 w-14 xl:hidden">
+                <img class="h-auto w-full" src="/dist/img/logo.png" loading="lazy" alt="" />
+            </a>
+            <nav class="menu-container">
+                <ul class="xl:flex xl:flex-1 xl:justify-end xl:gap-4">
+                    <li class="menu-item group">
+                        <a class="menu-link" href="#">
+                            Klub
+                            <div class="xl:hidden">
+                                <svg class="menu-plus" width="24" height="24">
+                                    <use href="#plus"></use>
+                                </svg>
+                                <svg class="menu-minus" width="24" height="24">
+                                    <use href="#minus"></use>
+                                </svg>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Základní</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Kontakty</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Historie</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Vedení klubu</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Nabídka reklamy</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item group">
+                        <a class="menu-link" href="#">
+                            stadion
+                            <div class="xl:hidden">
+                                <svg class="menu-plus" width="24" height="24">
+                                    <use href="#plus"></use>
+                                </svg>
+                                <svg class="menu-minus" width="24" height="24">
+                                    <use href="#minus"></use>
+                                </svg>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Základní informace</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Vstupenky a pronájmy</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Rozpis ledu</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Veřejné bruslení</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item group">
+                        <a class="menu-link" href="#">
+                            A-tým
+                            <div class="xl:hidden">
+                                <svg class="menu-plus" width="24" height="24">
+                                    <use href="#plus"></use>
+                                </svg>
+                                <svg class="menu-minus" width="24" height="24">
+                                    <use href="#minus"></use>
+                                </svg>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Zápasy</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Tabulka</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Soupiska</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Statistiky</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Realizační tým</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item group">
+                        <a class="menu-link" href="#">
+                            mládež
+                            <div class="xl:hidden">
+                                <svg class="menu-plus" width="24" height="24">
+                                    <use href="#plus"></use>
+                                </svg>
+                                <svg class="menu-minus" width="24" height="24">
+                                    <use href="#minus"></use>
+                                </svg>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Klubová strategie</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Nábory</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Rozcestník mládeže</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Realizační týmy mládeže</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Škola bruslení</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="mx-4 hidden h-auto w-40 xl:block" href="index.html">
+                    <img
+                        class="absolute -top-2/3 left-0 right-0 mx-auto object-contain transition-transform hover:scale-105"
+                        src="/dist/img/logo.png"
+                        width="120"
+                        height="120"
+                        loading="lazy"
+                        alt=""
+                    />
+                </a>
+                <ul class="xl:flex xl:flex-1 xl:gap-4">
+                    <li class="menu-item group"><a class="menu-link" href="#">Fotogalerie</a></li>
+                    <li class="menu-item group">
+                        <a class="menu-link" href="#">
+                            Fanzona
+                            <div class="xl:hidden">
+                                <svg class="menu-plus" width="24" height="24">
+                                    <use href="#plus"></use>
+                                </svg>
+                                <svg class="menu-minus" width="24" height="24">
+                                    <use href="#minus"></use>
+                                </svg>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Diskuzní fórum</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Ptejte se</a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Fanshop</a></li>
+                            <li class="dropdown-menu-item">
+                                <div class="dropdown-menu-link">Sociální sítě: <a href="#">Instagram</a> / <a href="#">Facebook</a></div>
+                            </li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">Fan club </a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item group"><a class="menu-link" href="#">Partneři</a></li>
+                    <li class="menu-item group">
+                        <a class="menu-link" href="#">
+                            KIS
+                            <div class="xl:hidden">
+                                <svg class="menu-plus" width="24" height="24">
+                                    <use href="#plus"></use>
+                                </svg>
+                                <svg class="menu-minus" width="24" height="24">
+                                    <use href="#minus"></use>
+                                </svg>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#">KIS přihlášení </a></li>
+                            <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#"> KIS registrace člena </a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item text-white xl:hidden">
+                        <a href="https://rozpis.hclomnice.cz/" target="_blank" class="menu-link"> Rozpis ledu </a>
+                    </li>
+                    <li class="menu-item text-white xl:hidden">
+                        <a href="https://www.youtube.com/watch?v=ehaErII8Gqg" target="_blank" class="menu-link"> Webkamera</a>
+                    </li>
+                    <li class="menu-item text-white xl:hidden">
+                        <a href="https://www.facebook.com/hclomnice.cz" target="_blank" class="menu-link"> Facebook</a>
+                    </li>
+                    <li class="menu-item text-white xl:hidden">
+                        <a href="https://www.instagram.com/hc_lomnice1920" target="_blank" class="menu-link"> Instagram</a>
+                    </li>
+                    <li class="menu-item text-white xl:hidden">
+                        <a href="https://eu.zonerama.com/HCLomnice" target="_blank" class="menu-link">Zonerama </a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="burger-menu" type="button" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <svg width="24" height="18">
+                    <use href="#menu"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+<script src="/dist/js/menu.js" async></script>
+
+
+        <main class="container flex flex-col gap-10 pb-20 pt-10">
+            <div class="md:bg-grey-60/25 md:p-8 lg:px-10">
+                <h1 class="text-3xl font-bold uppercase lg:text-4xl">Partneři</h1>
+            </div>
+
+            
+            <div>
+                <h2 class="text-secondary mb-6 text-2xl font-bold uppercase lg:text-3xl">1 partneři</h2>
+                <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            <div>
+                <h2 class="text-secondary mb-6 text-2xl font-bold uppercase lg:text-3xl">2 partneři</h2>
+                <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            <div>
+                <h2 class="text-secondary mb-6 text-2xl font-bold uppercase lg:text-3xl">3 partneři</h2>
+                <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" target="_blank">
+                            <img class="aspect-[3/2] w-full object-contain" src="https://placehold.co/297x198" width="297" height="198" alt="" />
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </main>
+
+        <footer class="bg-secondary text-white">
+    <div class="container py-10">
+        <ul class="mb-10 grid grid-cols-1 gap-10 md:grid-cols-6 lg:grid-cols-7">
+            <li class="col-span-6 lg:col-span-1">
+                <a href="index.html" class="z-100 block">
+                    <img class="mx-auto object-contain lg:mx-0" src="/dist/img/logo.png" width="148" height="148" loading="lazy" alt="" />
+                </a>
+            </li>
+            <li class="col-span-6 md:col-span-3">
+                <div class="mb-4 text-2xl uppercase text-white">Informace o klubu</div>
+                <p class="text-left leading-7">
+                    <span class="fw-bold text-lg">Hokejový klub Lomnice nad Popelkou, z.s.</span>
+                    <br />
+                    <span class="fw-bold text-lg">Sídlo:</span> Lomnice nad Popelkou 1535,
+                    <br />
+                    512 51 Lomnice nad Popelkou
+                    <br />
+                    <span class="fw-bold text-lg">DIČ:</span> CZ15045404
+                    <br />
+                    <span class="fw-bold text-lg">Datová schránka:</span>
+                    dfjaniq
+                    <br />
+                    <span class="fw-bold text-lg">Číslo účtu:</span>
+                    2502616453/2010
+                    <br />
+                    <span class="fw-bold text-lg">Předseda klubu: </span> Jaromír Dlouhý
+                    <br />
+                    <span class="fw-bold text-lg">Telefon:</span>
+                    +420 604 790 916
+                    <br />
+                    <span class="fw-bold text-lg">Email:</span>
+                    info@hclomnice.cz
+                    <br />
+                    <span class="fw-bold text-lg">Vedoucí šéftrenér:</span>
+                    Petr Vágenknecht
+                    <br />
+                    <span class="fw-bold text-lg">Telefon:</span>
+                    +420 604 917 972
+                    <br />
+                    <span class="fw-bold text-lg">Email:</span>
+                    seftrener@hclomnice.cz
+                    <br />
+                    <span class="fw-bold text-lg">Vedoucí náboru a přípravek:</span> Richard Lukáč
+                    <br />
+                    <span class="fw-bold text-lg">Telefon:</span>
+                    +420 604 438 354
+                    <br />
+                    <span class="fw-bold text-lg">Email:</span>
+                    mladez@hclomnice.cz
+                    <br />
+                    <span class="fw-bold text-lg">Klubové barvy:</span>
+                    bílá, modrá
+                </p>
+            </li>
+            <li class="col-span-6 md:col-span-3">
+                <div class="mb-4 text-2xl uppercase text-white">Hledat na webu</div>
+                <form id="footer-form" action="" method="GET" class="mb-10 grid grid-cols-1 gap-x-2 gap-y-6 sm:grid-cols-3">
+                    <input type="text" name="q" class="custom-input sm:col-span-2" placeholder="Vyhledat" />
+                    <button type="submit" class="btn">Hledat</button>
+                </form>
+                <p class="text-left leading-7">
+                    <a target="_blank" href="https://rozpis.hclomnice.cz">Rozpis ledu</a>
+                    <br />
+                    <a target="_blank" href="https://clen.hclomnice.cz">Klubový informační systém</a>
+                    <br />
+                    <a href="https://www.ceskyhokej.cz/ " target="_blank">Český hokej</a>
+                    <br />
+                    <a href="https://liberecky.ceskyhokej.cz/">Hokej Liberecký kraj</a>
+                    <br />
+                    <a href="http://www.hokej.cz" target="_blank">Hokej.cz</a>
+                    <br />
+                    <a href="http://www.onlajny.com">Onlajny.com</a>
+                </p>
+            </li>
+        </ul>
+
+        <p class="text-gray-100 col-span-10 text-center text-xs">
+            &copy; 2025 HC Lomnice n. Popelkou &
+            <a class="link-underline link-underline-normal" href="https://esportsmedia.cz/" target="_blank">eSports.cz</a> |
+            <a href="javascript:void(0);" data-cc="c-settings" aria-haspopup="dialog" class="link-underline link-underline-normal">Cookies</a>
+        </p>
+    </div>
+</footer>
+
+<div style="display: none"><?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow" viewBox="0 -960 960 960"><path d="m480-160-42-43 247-247H160v-60h525L438-757l42-43 320 320-320 320Z"/></symbol><symbol id="facebook" viewBox="0 0 32 32"><path d="M0 16C0 7.163 7.163 0 16 0s16 7.163 16 16-7.163 16-16 16S0 24.837 0 16Zm17.668 9.408v-8.705h2.403l.318-3h-2.721l.004-1.501c0-.783.074-1.202 1.198-1.202h1.502V8H17.97c-2.887 0-3.903 1.455-3.903 3.902v1.801h-1.8v3h1.8v8.705h3.602Z" fill="#FFF" fill-rule="evenodd"/></symbol><symbol id="instagram" viewBox="0 0 32 32"><path d="M16 0c8.837 0 16 7.163 16 16s-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0Zm1.021 6.668h-2.043a68.25 68.25 0 0 0-2.038.023l-.25.009c-.168.006-.34.014-.538.023-.993.046-1.672.203-2.265.434a4.57 4.57 0 0 0-1.653 1.076 4.582 4.582 0 0 0-1.078 1.653c-.231.594-.389 1.272-.433 2.265-.038.843-.052 1.2-.055 2.826v2.046c.003 1.625.017 1.982.055 2.824.046.994.203 1.672.434 2.266a4.573 4.573 0 0 0 1.076 1.653 4.57 4.57 0 0 0 1.653 1.077c.594.231 1.272.388 2.266.434.88.04 1.23.053 3.054.056h1.846a60.15 60.15 0 0 0 2.179-.03l.195-.007.421-.02c.994-.045 1.673-.202 2.267-.433a4.567 4.567 0 0 0 1.652-1.077c.52-.519.838-1.04 1.077-1.653.23-.594.387-1.272.434-2.265.01-.23.019-.424.026-.617l.006-.194c.016-.492.022-1.054.024-2.244v-1.832a69.048 69.048 0 0 0-.024-1.999l-.006-.194a73.716 73.716 0 0 0-.026-.616c-.047-.994-.204-1.672-.434-2.266a4.58 4.58 0 0 0-1.077-1.653 4.562 4.562 0 0 0-1.653-1.076c-.595-.231-1.273-.388-2.267-.434-.842-.038-1.199-.052-2.825-.055Zm-1.858 1.678 1.375.003h.467c1.032.002 1.538.008 1.993.022l.246.009a74 74 0 0 1 .528.022c.91.042 1.404.194 1.733.322.436.169.746.371 1.073.698.326.326.529.638.698 1.073.128.329.28.823.322 1.733l.025.606.007.19c.012.417.018.883.02 1.76l.002.435v1.558l-.001.435a46.556 46.556 0 0 1-.053 2.556c-.042.91-.194 1.404-.322 1.733-.17.435-.372.745-.698 1.072a2.886 2.886 0 0 1-1.073.698c-.329.128-.823.28-1.733.321-.825.038-1.166.05-2.727.054h-2.088c-1.561-.003-1.902-.016-2.728-.054-.91-.042-1.404-.194-1.733-.321a2.89 2.89 0 0 1-1.073-.698 2.893 2.893 0 0 1-.699-1.073c-.127-.329-.28-.823-.321-1.733-.04-.87-.051-1.202-.053-2.992v-1.559c.001-1.225.007-1.766.023-2.265l.008-.23a78.4 78.4 0 0 1 .022-.496c.041-.91.194-1.404.321-1.733.17-.435.372-.746.699-1.073a2.897 2.897 0 0 1 1.073-.698c.33-.129.823-.28 1.733-.322l.517-.022.24-.009a72.29 72.29 0 0 1 2.177-.022Zm.818 2.838a4.793 4.793 0 1 0 0 9.587 4.793 4.793 0 0 0 0-9.587ZM16 12.938a3.062 3.062 0 1 1 0 6.124 3.062 3.062 0 0 1 0-6.125Zm4.963-3.063a1.12 1.12 0 1 0 0 2.24 1.12 1.12 0 0 0 0-2.24Z" fill="#FFF" fill-rule="evenodd"/></symbol><symbol id="menu" viewBox="0 0 24 18"><path d="M1 0h22a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2Zm0 8h22a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2Zm0 8h22a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2Z" fill="#FFF" fill-rule="evenodd"/></symbol><symbol id="minus" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></g></symbol><symbol id="plus" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/></g></symbol><symbol id="youtube" viewBox="0 0 32 32"><path d="M16 0c8.837 0 16 7.163 16 16s-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0ZM7.557 8.89c1.693-.44 8.436-.44 8.436-.44s6.757 0 8.45.467c.92.24 1.652.973 1.892 1.892.466 1.693.453 5.211.453 5.211s0 3.505-.453 5.184a2.681 2.681 0 0 1-1.893 1.906c-1.692.44-8.449.44-8.449.44s-6.73 0-8.436-.454a2.746 2.746 0 0 1-1.905-1.905c-.44-1.666-.44-5.184-.44-5.184s0-3.505.44-5.198c.253-.92 1-1.666 1.905-1.919Zm11.901 7.117-5.61-3.239v6.464l5.61-3.225Z" fill="#FFF" fill-rule="evenodd"/></symbol><symbol></symbol></svg> </div>
+
+    </body>
+</html>

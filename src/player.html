@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'HC Lomnice n. Popelkou'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+
+        <main class="container pb-20 pt-10 md:pt-0">
+            <div
+                class="relative before:z-1 before:bg-gradient-to-t before:from-black before:to-transparent md:flex md:aspect-[21/9] md:items-end md:before:absolute md:before:inset-0"
+            >
+                <img
+                    class="absolute inset-0 hidden h-full w-full object-cover md:block"
+                    src="https://picsum.photos/1260/540"
+                    width="1260"
+                    height="540"
+                    alt=""
+                />
+                <div class="relative z-10 flex w-full flex-col gap-10 md:flex-row md:items-end md:justify-between md:p-8 lg:p-10">
+                    <div class="flex flex-col items-center gap-6 md:flex-row md:gap-10">
+                        <img
+                            class="aspect-square w-24 rounded-full border-4 border-white object-contain lg:w-[156px]"
+                            src="https://picsum.photos/156"
+                            width="156"
+                            height="156"
+                            alt=""
+                        />
+                        <div class="text-center md:text-left">
+                            <h2 class="text-2xl font-bold md:text-white lg:mb-1 lg:text-4xl">Michal</h2>
+                            <h1 class="mb-2 text-3xl font-bold uppercase md:text-white lg:text-5xl">Novák</h1>
+                            <h5 class="text-lg font-bold uppercase text-grey-100 md:text-grey-60">Brankář</h5>
+                        </div>
+                    </div>
+                    <ul class="flex flex-wrap justify-center gap-x-10 gap-y-4 text-center md:text-left lg:mb-4">
+                        <li>
+                            <h5 class="text-lg font-bold uppercase text-grey-100 md:text-grey-60">Narozen</h5>
+                            <span class="text-xl md:text-white">1. 12. 1998</span>
+                        </li>
+                        <li>
+                            <h5 class="text-lg font-bold uppercase text-grey-100 md:text-grey-60">Výška</h5>
+                            <span class="text-xl md:text-white">187 cm</span>
+                        </li>
+                        <li>
+                            <h5 class="text-lg font-bold uppercase text-grey-100 md:text-grey-60">Váha</h5>
+                            <span class="text-xl md:text-white">81 kg</span>
+                        </li>
+                        <li>
+                            <h5 class="text-lg font-bold uppercase text-grey-100 md:text-grey-60">Národnost</h5>
+                            <span class="text-xl md:text-white">Česká</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-10 py-10 md:px-8 lg:px-10">
+                <div>
+                    <h3 class="text-secondary mb-4 text-2xl font-bold uppercase">Posledních 5 zápasů</h3>
+                    <div class="overflow-x-auto">
+                        <table class="styled">
+                            <thead>
+                                <tr>
+                                    <th class="text-start">Datum</th>
+                                    <th class="text-start">Utkání</th>
+                                    <th>G</th>
+                                    <th>A</th>
+                                    <th>B</th>
+                                    <th>+/-</th>
+                                    <th>TM</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @@for(i = 1; i < 3; i++) {
+                                <tr>
+                                    <td>8. 10. 2023</td>
+                                    <td>
+                                        Kralupy vs Kralupy (<a href="match.html" class="link-underline link-underline-normal win font-bold">2:1</a>)
+                                    </td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">8</td>
+                                    <td class="text-center">7</td>
+                                    <td class="text-center">3</td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <!-- <table class="styled">
+                            <thead>
+                                <tr>
+                                    <th class="text-start">Datum</th>
+                                    <th class="text-start">Utkání</th>
+                                    <th>Min</th>
+                                    <th>Stř</th>
+                                    <th>Ink</th>
+                                    <th>Zás</th>
+                                    <th>Úsp</th>
+                                    <th>A</th>
+                                    <th>TM</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @@for(i = 1; i < 3; i++) {
+                                <tr>
+                                    <td>8. 10. 2023</td>
+                                    <td>
+                                        Kralupy vs Kralupy (<a href="match.html" class="link-underline link-underline-normal win font-bold">2:1</a>)
+                                    </td>
+                                    <td class="text-center">120</td>
+                                    <td class="text-center">20</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center">12</td>
+                                    <td class="text-center">90%</td>
+                                    <td class="text-center">0</td>
+                                    <td class="text-center">2</td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>  -->
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-dark mb-4 text-xl font-bold uppercase lg:text-2xl">Sezóny</h3>
+                    <div class="overflow-x-auto">
+                        <table class="styled">
+                            <thead>
+                                <tr>
+                                    <th class="text-start">Sezóna</th>
+                                    <th>G</th>
+                                    <th>A</th>
+                                    <th>Stř</th>
+                                    <th>B</th>
+                                    <th>+/-</th>
+                                    <th>TM</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @@for(i = 1; i < 3; i++) {
+                                <tr>
+                                    <td>Chance liga</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">8</td>
+                                    <td class="text-center">7</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">10</td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <!-- <table class="styled">
+                            <thead>
+                                <tr>
+                                    <th class="text-start">Sezóna</th>
+                                    <th>Min</th>
+                                    <th>Stř</th>
+                                    <th>Ink</th>
+                                    <th>Zás</th>
+                                    <th>Úsp</th>
+                                    <th>A</th>
+                                    <th>TM</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @@for(i = 1; i < 3; i++) {
+                                <tr>
+                                    <td>Chance liga</td>
+                                    <td class="text-center">120</td>
+                                    <td class="text-center">20</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center">12</td>
+                                    <td class="text-center">90%</td>
+                                    <td class="text-center">0</td>
+                                    <td class="text-center">2</td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table> -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        @@include('./components/footer.html')
+    </body>
+</html>

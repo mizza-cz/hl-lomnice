@@ -1,0 +1,5 @@
+@layer components {
+    #team-button[data-active='1'] {
+        @apply text-secondary;
+    }
+}

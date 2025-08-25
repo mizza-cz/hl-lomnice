@@ -1,0 +1,102 @@
+@layer base {
+    em,
+    i {
+        @apply italic;
+    }
+
+    b,
+    strong {
+        @apply font-bold;
+    }
+
+    .typo p {
+        @apply [&:not(:last-child)]:mb-4;
+    }
+
+    /* anchor tag */
+    .typo a {
+        @apply hover:underline;
+    }
+
+    /* headings */
+    .typo h1 {
+        @apply text-3xl lg:text-4xl;
+    }
+
+    .typo h2 {
+        @apply text-2xl lg:text-3xl;
+    }
+
+    .typo h3 {
+        @apply text-xl lg:text-2xl;
+    }
+
+    .typo h4 {
+        @apply text-lg lg:text-xl;
+    }
+
+    .typo h5 {
+        @apply text-base lg:text-lg;
+    }
+
+    .typo h6 {
+        @apply text-base;
+    }
+
+    .typo :is(h1, h2, h3, h4, h5, h6) {
+        @apply text-secondary [&:not(:last-child)]:mb-4;
+    }
+
+    /* lists */
+    .typo :is(ul, ol) {
+        @apply mb-4 pl-4;
+    }
+
+    .typo ul {
+        @apply list-disc;
+    }
+
+    .typo ol {
+        @apply list-decimal;
+    }
+
+    .typo :is(ul, ol) li {
+        @apply marker:text-primary [&:not(:last-child)]:mb-1;
+    }
+
+    /* img, iframe */
+    .typo :is(img, iframe) {
+        @apply h-auto max-w-full [&:not(:last-child)]:mb-4;
+    }
+
+    .typo iframe[src*='youtube.com/'] {
+        @apply aspect-video w-full;
+    }
+
+    /* table */
+    table.styled,
+    .typo table {
+        @apply w-full border-collapse align-top;
+    }
+
+    .typo table {
+        @apply [&:not(:last-child)]:mb-4;
+    }
+
+    /* general */
+    :is(table.styled, .typo table) th {
+        @apply border-b-2 border-b-grey-60;
+    }
+
+    :is(table.styled, .typo table) td {
+        @apply border-b border-b-grey-60;
+    }
+
+    :is(table.styled, .typo table) th {
+        @apply p-2 text-sm font-bold uppercase text-grey-100;
+    }
+
+    :is(table.styled, .typo table) td {
+        @apply p-2;
+    }
+}

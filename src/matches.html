@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'HC Lomnice n. Popelkou'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+
+        <main class="container pb-20 pt-10">
+            <div class="mb-10 flex flex-wrap items-center justify-between gap-6 md:bg-grey-60/25 md:p-8 lg:px-10">
+                <h1 class="text-3xl font-bold uppercase lg:text-4xl">2. liga - sk. Západ</h1>
+                <form id="matches-form" method="GET" class="flex flex-wrap items-center gap-2">
+                    <select
+                        class="custom-select min-w-[120px]"
+                        name="match_type"
+                        id="match_type"
+                        onchange="document.querySelector('#matches-form').submit()"
+                    >
+                        <option value="">všechny</option>
+                        <option value="home">doma</option>
+                        <option value="away">venku</option>
+                    </select>
+                    <select class="custom-select min-w-[150px]" name="season" id="season" onchange="document.querySelector('#matches-form').submit()">
+                        <option value="2024">2023/2024</option>
+                        <option value="2023">2022/2023</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+                <div class="lg:col-span-2">
+                    <!-- <p class="notice w-max max-w-full">Nebyly nalezeny žádné zápasy.</p> -->
+
+                    <ul class="divide-secondary/10 divide-y">
+                        @@for(i = 1; i < 7; i++) {
+                        <li class="flex flex-wrap items-center gap-3 px-3 py-6 md:gap-6">
+                            <div class="hidden gap-3 sm:flex">
+                                <img class="aspect-square object-contain" src="/dist/img/logo.png" height="60" width="60" alt="" />
+                                <img class="aspect-square object-contain" src="/dist/img/logo.png" height="60" width="60" alt="" />
+                            </div>
+                            <div class="flex-1">
+                                <span class="text-sm">`+i+`. kolo, 28. 7. 2023</span>
+                                <div class="flex flex-wrap items-center gap-3">
+                                    <!-- our team -> uppercase -->
+                                    <h4 class="whitespace-nowrap text-lg font-bold lg:text-xl">Mostečtí lvi</h4>
+                                    <span class="pb-0.5">vs</span>
+                                    <h4 class="whitespace-nowrap text-lg font-bold lg:text-xl">Mostečtí lvi</h4>
+                                </div>
+                            </div>
+                            <a class="win link-underline link-underline-normal text-2xl font-bold lg:text-4xl" href="match.html">3:0</a>
+                            <div class="w-full md:w-max">
+                                <a class="btn btn-secondary" href="#" target="_blank">On-line</a>
+                            </div>
+                        </li>
+                        } @@for(i = 7; i < 15; i++) {
+                        <li class="flex flex-wrap items-center gap-3 px-3 py-6 md:gap-6">
+                            <div class="hidden gap-3 sm:flex">
+                                <img class="aspect-square object-contain" src="/dist/img/logo.png" height="60" width="60" alt="" />
+                                <img class="aspect-square object-contain" src="/dist/img/logo.png" height="60" width="60" alt="" />
+                            </div>
+                            <div class="flex-1">
+                                <span class="text-sm">`+i+`. kolo, 28. 7. 2023</span>
+                                <div class="flex flex-wrap items-center gap-3">
+                                    <!-- our team -> uppercase -->
+                                    <h4 class="whitespace-nowrap text-lg font-bold lg:text-xl">Mostečtí lvi</h4>
+                                    <span class="pb-0.5">vs</span>
+                                    <h4 class="whitespace-nowrap text-lg font-bold lg:text-xl">Mostečtí lvi</h4>
+                                </div>
+                            </div>
+                            <time class="text-2xl font-bold lg:text-4xl" datetime="2023-07-28 18:00">18:00</time>
+                            <div class="w-full md:w-max">
+                                <a class="btn btn-secondary" href="#" target="_blank">On-line</a>
+                            </div>
+                        </li>
+                        }
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-10 lg:col-span-1">
+                    @@include('./components/submenu.html', { 'name': 'A-tým', 'links': ['Soupiska', 'Realizační tým', 'Zápasy', 'Tabulka',
+                    'Statistiky']}) @@include('./components/more-articles.html')
+                </div>
+            </div>
+        </main>
+
+        @@include('./components/footer.html')
+    </body>
+</html>

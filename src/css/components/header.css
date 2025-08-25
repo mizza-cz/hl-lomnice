@@ -1,0 +1,5 @@
+@layer components {
+    header.scrolled {
+        @apply fixed left-0 top-0 w-full shadow-md;
+    }
+}

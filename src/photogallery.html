@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'HC Lomnice n. Popelkou'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+
+        <main class="container pb-20 pt-10">
+            <div class="mb-6 md:bg-grey-60/25 md:p-8 lg:px-10">
+                <h1 class="text-3xl font-bold uppercase lg:text-4xl">Fotogalerie</h1>
+            </div>
+
+            <form id="photogallery-form" action="" method="GET" class="mb-10 grid grid-cols-1 gap-x-2 gap-y-6 sm:grid-cols-3">
+                <select class="custom-select w-full" name="category" id="category" onchange="document.querySelector('#photogallery-form').submit()">
+                    <option value="">Kategorie</option>
+                    <option value="1">Mládež</option>
+                </select>
+                <input type="text" name="q" class="custom-input" placeholder="Vyhledat fotogalerii" />
+                <button type="submit" class="btn">Hledat</button>
+            </form>
+
+            <!-- <p class="notice w-max">Nebyly nalezeny žádné fotogalerie.</p> -->
+
+            <div class="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                @@for(i = 0; i < 12; i++) {
+                <a href="#" data-source="/ajax-gallery.json" data-gallery-id="`+i+`" class="group">
+                    <article>
+                        <div class="mb-4 overflow-hidden">
+                            <img
+                                class="aspect-[3/2] w-full object-cover transition-transform group-hover:scale-105"
+                                src="https://picsum.photos/297/198"
+                                srcset="https://picsum.photos/297/198 297px, https://picsum.photos/440/293 440w"
+                                sizes="(min-width: 1016px) 297px, calc(100vw - 24px)"
+                                width="297"
+                                height="198"
+                                alt=""
+                                loading="lazy"
+                            />
+                        </div>
+                        <div>
+                            <span class="bg-primary mb-2 inline-block px-2 py-1 text-sm font-bold text-white">22. 8. 2023</span>
+                            <h2 class="link-underline link-underline-group line-clamp-3 text-2xl font-bold">
+                                1. V prvním říjnovém utkání se áčko představí na ledě Děčína
+                            </h2>
+                        </div>
+                    </article>
+                </a>
+                }
+            </div>
+            <script src="/dist/js/fslightbox.js" async></script>
+            <script src="/dist/js/ajax-gallery.js" async></script>
+
+            @@include('./components/pagination.html')
+        </main>
+
+        @@include('./components/footer.html')
+    </body>
+</html>

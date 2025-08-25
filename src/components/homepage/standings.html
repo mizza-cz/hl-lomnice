@@ -1,0 +1,32 @@
+<section class="lg:col-span-3" aria-label="Tabulka">
+    <h3 class="mb-4 text-2xl uppercase text-secondary">Tabulka</h3>
+    <div class="mb-4 overflow-x-auto">
+        <table class="styled">
+            <thead>
+                <tr>
+                    <th class="text-start">#</th>
+                    <th class="text-start">Tým</th>
+                    <th class="text-end">B</th>
+                </tr>
+            </thead>
+            <tbody>
+                @@for(i = 1; i < 7; i++) {
+                <tr>
+                    <td>`+i+`.</td>
+                    <td>
+                        <div class="flex items-center gap-2">
+                            <img src="/dist/img/logo.png" class="aspect-square object-contain" width="16" height="16" loading="lazy" alt="" />
+                            HK Kralupy
+                        </div>
+                    </td>
+                    <td class="text-end"><b>67</b></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="flex justify-center">
+        <a href="standings.html" class="btn">Kompletní tabulka</a>
+    </div>
+</section>

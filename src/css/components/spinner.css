@@ -1,0 +1,5 @@
+@layer components {
+    .spinner {
+        @apply mr-2 h-8 w-8 animate-spin fill-red-400 text-white;
+    }
+}

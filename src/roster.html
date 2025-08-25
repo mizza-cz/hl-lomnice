@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'HC Lomnice n. Popelkou'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+
+        <main class="container pb-20 pt-10">
+            <div class="mb-10 flex flex-wrap items-center justify-between gap-6 md:bg-grey-60/25 md:p-8 lg:px-10">
+                <h1 class="text-3xl font-bold uppercase lg:text-4xl">Soupiska A-tým 2023/2024</h1>
+                <form id="roster-form" method="GET">
+                    <select class="custom-select min-w-[150px]" name="season" id="season" onchange="document.querySelector('#roster-form').submit()">
+                        <option value="2024">2023/2024</option>
+                        <option value="2023">2022/2023</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+                <div class="lg:col-span-2">
+                    <!-- <p class="notice w-max max-w-full">Nebyly nalezena žádná soupiska.</p> -->
+
+                    <div class="flex flex-col gap-10">
+                        @@for(i = 0; i < 3; i++) {
+                        <div>
+                            <h3 class="mb-6 text-2xl font-bold uppercase text-secondary">Brankáři</h3>
+                            <ul class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                                @@for(i = 0; i < 5; i++) {
+                                <li>
+                                    <a href="player.html" class="group grid grid-cols-[64px_1fr] items-center gap-4">
+                                        <div class="relative aspect-square">
+                                            <img
+                                                class="h-full w-full rounded-full object-cover object-center"
+                                                src="https://picsum.photos/68"
+                                                width="68"
+                                                height="68"
+                                                loading="lazy"
+                                                alt=""
+                                            />
+                                            <b
+                                                class="invisible absolute inset-0 grid h-full w-full place-items-center rounded-full bg-secondary/75 text-2xl text-white opacity-0 transition-all group-hover:visible group-hover:opacity-100"
+                                            >
+                                                32
+                                            </b>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-lg font-bold group-hover:underline lg:text-xl">Dlouhé jméno</h4>
+                                            <ul class="flex flex-wrap divide-x">
+                                                <li class="pr-2">20. 7. 1995</li>
+                                                <li class="px-2">28 let</li>
+                                                <li class="px-2">185 cm</li>
+                                                <li class="px-2">93 kg</li>
+                                                <li class="pl-2">L</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                }
+                            </ul>
+                        </div>
+                        }
+                    </div>
+                </div>
+                <div class="flex flex-col gap-10 lg:col-span-1">
+                    @@include('./components/submenu.html', { 'name': 'A-tým', 'links': ['Soupiska', 'Realizační tým', 'Zápasy', 'Tabulka',
+                    'Statistiky']}) @@include('./components/more-articles.html')
+                </div>
+            </div>
+        </main>
+
+        @@include('./components/footer.html')
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<section class="bg-grey-60/25" aria-label="Mládež">
+    <div class="container py-10">
+        <h3 class="mb-4 text-2xl uppercase text-secondary">Mládež</h3>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-8">
+            <ul class="lg:col-span-2">
+                @@for(i = 1; i < 6; i++) {
+                <li>
+                    <details class="group bg-primary">
+                        <summary class="flex w-full cursor-pointer items-center justify-between border-t border-t-white/25 px-4 py-3 marker:hidden">
+                            <span class="font-bold text-white">Kategorie `+i+`</span>
+                            <svg width="20" height="20" class="hidden fill-white group-open:block">
+                                <use href="#minus"></use>
+                            </svg>
+                            <svg width="20" height="20" class="block fill-white group-open:hidden">
+                                <use href="#plus"></use>
+                            </svg>
+                        </summary>
+                        <ul class="flex flex-col gap-2 px-4 pb-3">
+                            <li><a class="link-underline link-underline-normal text-white" href="matches.html">zápasy</a></li>
+                            <li><a class="link-underline link-underline-normal text-white" href="stats.html">statistiky</a></li>
+                            <li><a class="link-underline link-underline-normal text-white" href="roster.html">soupiska</a></li>
+                            <li><a class="link-underline link-underline-normal text-white" href="standings.html">tabulka</a></li>
+                        </ul>
+                    </details>
+                </li>
+                }
+            </ul>
+            <a href="#" class="group block lg:col-span-4">
+                <article>
+                    <div class="mb-4 overflow-hidden">
+                        <img
+                            class="aspect-[3/2] w-full object-cover transition-transform group-hover:scale-105"
+                            src="https://picsum.photos/618/412"
+                            width="618"
+                            height="412"
+                            alt=""
+                            loading="lazy"
+                        />
+                    </div>
+                    <div>
+                        <span class="mb-2 inline-block bg-primary px-2 py-1 text-sm font-bold text-white">22. 8. 2023</span>
+                        <h2 class="link-underline link-underline-group line-clamp-2 text-2xl font-bold">
+                            1. V prvním říjnovém utkání se áčko představí na ledě Děčína
+                        </h2>
+                    </div>
+                </article>
+            </a>
+            <div class="flex flex-col gap-4 lg:col-span-2">
+                @@for(i = 0; i < 4; i++) {
+                <a href="article.html" class="group">
+                    <article>
+                        <div class="mb-2 flex gap-1">
+                            <span class="inline-block bg-primary px-2 py-1 text-sm font-bold text-white">Mládež</span>
+                            <span class="inline-block bg-primary px-2 py-1 text-sm font-bold text-white">Včera</span>
+                        </div>
+                        <h3 class="link-underline link-underline-group line-clamp-2 text-2xl font-bold">
+                            Připravujeme nový web! Připravujeme nový web! Připravujeme nový web!
+                        </h3>
+                    </article>
+                </a>
+                }
+                <a href="archive.html" class="btn mx-auto w-max max-w-full">Další články mládeže</a>
+            </div>
+        </div>
+    </div>
+</section>

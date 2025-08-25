@@ -1,0 +1,5 @@
+@layer components {
+    .container-subpage {
+        @apply container lg:max-w-[928px] xl:max-w-[928px] 2xl:max-w-[928px];
+    }
+}

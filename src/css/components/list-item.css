@@ -1,0 +1,10 @@
+@layer components {
+    .list-item-with-slash + .list-item-with-slash {
+        @apply relative pl-3;
+    }
+
+    .list-item-with-slash + .list-item-with-slash::before {
+        content: '/';
+        @apply absolute left-[3px] text-gray-100;
+    }
+}

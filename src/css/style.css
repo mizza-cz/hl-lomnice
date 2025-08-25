@@ -1,0 +1,38 @@
+@use './../../node_modules/tiny-slider/dist/tiny-slider';
+@tailwind base;
+
+@layer base {
+    body {
+        @apply bg-white font-body font-normal text-black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-title;
+    }
+}
+
+@import './base/typo.css';
+@import './base/form.css';
+
+@tailwind components;
+
+@import './components/button.css';
+@import './components/menu.css';
+@import './components/topstory.css';
+@import './components/header.css';
+@import './components/notice.css';
+@import './components/toast.css';
+/* @import './components/spinner.css'; */
+/* @import './components/container-subpage.css'; */
+/* @import './components/list-item.css'; */
+/* @import './components/teams.css'; */
+
+@tailwind utilities;
+
+@import './utils/link-underline.css';
+@import './utils/match-result.css';

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'HC Lomnice n. Popelkou'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+
+        <main class="container pb-20 pt-10">
+            <div class="mb-10 md:bg-grey-60/25 md:p-8 lg:px-10">
+                <h1 class="text-3xl font-bold uppercase lg:text-4xl">Realizační tým A-tým</h1>
+            </div>
+
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+                <div class="lg:col-span-2">
+                    <!-- <p class="notice w-max max-w-full">Nebyl nalezen žádný realizační tým.</p> -->
+
+                    <ul class="grid grid-cols-1 gap-6 md:grid-cols-3">
+                        @@for(i = 0; i < 8; i++) {
+                        <li>
+                            <img src="https://picsum.photos/260" class="aspect-square w-full object-cover" height="260" width="260" alt="" />
+                            <div class="bg-primary p-3 text-center">
+                                <h4 class="text-xl font-bold">Dlouhé jméno</h4>
+                                <span>hlavní trenér</span>
+                            </div>
+                        </li>
+                        }
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-10 lg:col-span-1">
+                    @@include('./components/submenu.html', { 'name': 'A-tým', 'links': ['Soupiska', 'Realizační tým', 'Zápasy', 'Tabulka',
+                    'Statistiky']}) @@include('./components/more-articles.html')
+                </div>
+            </div>
+        </main>
+
+        @@include('./components/footer.html')
+    </body>
+</html>

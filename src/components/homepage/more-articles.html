@@ -1,0 +1,35 @@
+<section class="bg-grey-60/25" aria-label="Další články">
+    <div class="container py-10">
+        <div class="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <!-- <p class="notice w-max">Nebyly nalezeny žádné články.</p> -->
+
+            @@for(i = 0; i < 4; i++) {
+            <a href="#" class="group">
+                <article>
+                    <div class="mb-4 overflow-hidden">
+                        <img
+                            class="aspect-[3/2] w-full object-cover transition-transform group-hover:scale-105"
+                            src="https://picsum.photos/297/198"
+                            srcset="https://picsum.photos/297/198 297px, https://picsum.photos/440/293 440w"
+                            sizes="(min-width: 1016px) 297px, calc(100vw - 24px)"
+                            width="297"
+                            height="198"
+                            alt=""
+                            loading="lazy"
+                        />
+                    </div>
+                    <div>
+                        <span class="bg-primary mb-2 inline-block px-2 py-1 text-sm font-bold text-white">22. 8. 2023</span>
+                        <h2 class="link-underline link-underline-group line-clamp-3 text-2xl font-bold">
+                            1. V prvním říjnovém utkání se áčko představí na ledě Děčína
+                        </h2>
+                    </div>
+                </article>
+            </a>
+            }
+        </div>
+        <div class="flex justify-center">
+            <a class="btn" href="archive.html">Další články</a>
+        </div>
+    </div>
+</section>

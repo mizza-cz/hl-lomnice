@@ -1,0 +1,9 @@
+@layer utilities {
+    .win {
+        @apply text-green;
+    }
+
+    .lost {
+        @apply text-red;
+    }
+}

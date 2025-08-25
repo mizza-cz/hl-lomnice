@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="18px" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>menu</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobil---menu" transform="translate(-345, -19)" fill="#FFFFFF">
+            <g id="Group-2" transform="translate(333, 8)">
+                <path d="M13,11 L35,11 C35.5522847,11 36,11.4477153 36,12 C36,12.5522847 35.5522847,13 35,13 L13,13 C12.4477153,13 12,12.5522847 12,12 C12,11.4477153 12.4477153,11 13,11 Z M13,19 L35,19 C35.5522847,19 36,19.4477153 36,20 C36,20.5522847 35.5522847,21 35,21 L13,21 C12.4477153,21 12,20.5522847 12,20 C12,19.4477153 12.4477153,19 13,19 Z M13,27 L35,27 C35.5522847,27 36,27.4477153 36,28 C36,28.5522847 35.5522847,29 35,29 L13,29 C12.4477153,29 12,28.5522847 12,28 C12,27.4477153 12.4477153,27 13,27 Z" id="menu"></path>
+            </g>
+        </g>
+    </g>
+</svg>

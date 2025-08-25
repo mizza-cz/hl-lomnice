@@ -1,0 +1,5 @@
+@layer components {
+    .notice {
+        @apply bg-primary px-4 py-2 text-white;
+    }
+}

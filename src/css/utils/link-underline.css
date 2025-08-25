@@ -1,0 +1,13 @@
+@layer utilities {
+    .link-underline {
+        @apply underline decoration-transparent decoration-2 underline-offset-2 transition-colors;
+    }
+
+    .link-underline.link-underline-normal {
+        @apply hover:decoration-inherit;
+    }
+
+    .link-underline.link-underline-group {
+        @apply group-hover:decoration-inherit;
+    }
+}

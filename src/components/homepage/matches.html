@@ -1,0 +1,38 @@
+<section class="shadow-md" aria-label="Zápasy">
+    <div class="py-10 md:container">
+        <ul id="matches-slider" class="flex">
+            @@for (var i = 0; i < 3; i++) {
+            <li>
+                <div class="flex items-start gap-6 px-3">
+                    <img class="hidden aspect-square object-contain md:block" src="/dist/img/logo.png" width="78" height="78" alt="" loading="lazy" />
+                    <div>
+                        <span class="mb-1 block text-sm font-bold text-grey-100">10. 9. 2023, 17:00</span>
+                        <h4 class="text-xl">HK Kralupy</h4>
+                        <h4 class="text-xl">HK Kralupy</h4>
+                    </div>
+                    <div>
+                        <span class="mb-1 block text-sm font-bold text-grey-100">Doma</span>
+                        <a href="match.html" class="link-underline link-underline-normal text-40 font-bold">41:34</a>
+                    </div>
+                </div>
+            </li>
+            } @@for (var i = 0; i < 3; i++) {
+            <li>
+                <div class="flex items-start gap-6 px-3">
+                    <img class="hidden aspect-square object-contain md:block" src="/dist/img/logo.png" width="78" height="78" alt="" loading="lazy" />
+                    <div>
+                        <span class="mb-1 block text-sm font-bold text-grey-100">10. 9. 2023, 17:00</span>
+                        <h4 class="text-xl">HK Kralupy</h4>
+                        <h4 class="text-xl">HK Kralupy</h4>
+                    </div>
+                    <div>
+                        <span class="mb-1 block text-sm font-bold text-grey-100">Venku</span>
+                        <span class="text-40 font-bold">18:00</span>
+                    </div>
+                </div>
+            </li>
+            }
+        </ul>
+    </div>
+</section>
+<script src="/dist/js/slider.js" async></script>

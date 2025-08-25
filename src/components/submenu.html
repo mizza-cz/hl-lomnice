@@ -1,0 +1,11 @@
+<div>
+    <h2 class="text-secondary mb-2 text-2xl font-bold uppercase">@@name</h2>
+    <ul>
+        @@for(i = 0; i < links.length; i++) {
+        <li class="border-b-secondary/10 border-b last:border-b-0">
+            <!-- active class: 'text-primary' -->
+            <a href="#" class="link-underline link-underline-normal block p-3 font-medium">`+links[i]+`</a>
+        </li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        @@include('./components/head.html', {'title': 'HC Lomnice n. Popelkou'})
+    </head>
+    <body>
+        @@include('./components/header.html')
+
+        <main class="container pb-20 pt-10">
+            <div class="mb-10 flex flex-wrap items-center justify-between gap-6 md:bg-grey-60/25 md:p-8 lg:px-10">
+                <h1 class="text-3xl font-bold uppercase lg:text-4xl">Tabulka A-tým 2023/2024</h1>
+                <form id="standings-form" method="GET">
+                    <select
+                        class="custom-select min-w-[150px]"
+                        name="season"
+                        id="season"
+                        onchange="document.querySelector('#standings-form').submit()"
+                    >
+                        <option value="2024">2023/2024</option>
+                        <option value="2023">2022/2023</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+                <div class="lg:col-span-2">
+                    <!-- <p class="notice w-max max-w-full">Tabulka nebyla nalezena.</p> -->
+
+                    <div class="overflow-x-auto">
+                        <table class="styled">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th class="text-left">Tým</th>
+                                    <th>Z</th>
+                                    <th>V</th>
+                                    <th>VP</th>
+                                    <th>R</th>
+                                    <th>PP</th>
+                                    <th>P</th>
+                                    <th>Skóre</th>
+                                    <th>B</th>
+                                    <th>RB</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @@for(i = 1; i < 15; i++) {
+                                <!-- active class = 'our-team'  -->
+                                <tr>
+                                    <td class="text-center">`+i+`.</td>
+                                    <td>
+                                        <div class="flex min-w-max items-center gap-2 whitespace-nowrap">
+                                            <img
+                                                src="/dist/img/logo.png"
+                                                class="aspect-square object-contain"
+                                                width="24"
+                                                height="24"
+                                                loading="lazy"
+                                                alt=""
+                                            />
+                                            Mostečtí lvi
+                                        </div>
+                                    </td>
+                                    <td class="text-center">120</td>
+                                    <td class="text-center">20</td>
+                                    <td class="text-center">5</td>
+                                    <td class="text-center">12</td>
+                                    <td class="text-center">23</td>
+                                    <td class="text-center">0</td>
+                                    <td class="text-center">22:23</td>
+                                    <td class="text-center"><b>32</b></td>
+                                    <td class="text-center">1</td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-10 lg:col-span-1">
+                    @@include('./components/submenu.html', { 'name': 'A-tým', 'links': ['Soupiska', 'Realizační tým', 'Zápasy', 'Tabulka',
+                    'Statistiky']}) @@include('./components/more-articles.html')
+                </div>
+            </div>
+        </main>
+
+        @@include('./components/footer.html')
+    </body>
+</html>

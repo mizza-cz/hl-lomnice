@@ -1,0 +1,21 @@
+@layer components {
+    .toast {
+        @apply fixed bottom-6 right-6 z-100 bg-white p-6 shadow-md transition-all duration-600;
+    }
+
+    .toast p {
+        @apply text-lg;
+    }
+
+    .toast.success {
+        @apply border-l-4 border-l-green;
+    }
+
+    .toast.failed {
+        @apply border-l-4 border-l-red;
+    }
+
+    .toast.disappear {
+        @apply translate-x-[150%];
+    }
+}

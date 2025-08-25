@@ -1,0 +1,16 @@
+@layer components {
+    .topstory-nav-item {
+        @apply border-l-4 border-l-transparent transition-all;
+    }
+    .topstory-nav-item.on {
+        @apply border-l-primary;
+    }
+
+    .topstory-article {
+        @apply lg:hidden;
+    }
+
+    .topstory-article.on {
+        @apply lg:block;
+    }
+}
