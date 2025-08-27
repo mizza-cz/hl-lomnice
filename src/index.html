@@ -7,10 +7,9 @@
         @@include('./components/dialog.html') @@include('./components/header.html')
 
         <main>
-            @@include('./components/homepage/topstory.html')
-             @@include('./components/homepage/more-articles.html')
-            @@include('./components/homepage/matches.html')
-           
+            @@include('./components/homepage/topstory.html') @@include('./components/homepage/more-articles.html')
+            @@include('./components/homepage/matches.html') @@include('./components/homepage/social-posts.html')
+
             <section class="container my-10 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 lg:gap-6" aria-label="Bannery">
                 @@for(i = 0; i < 3; i++) {
                 <a href="#" target="_blank" class="mx-auto block">
@@ -19,6 +18,7 @@
                 }
             </section>
             <div class="container my-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-8">
+                <!-- 
                 <section class="lg:col-span-5" aria-label="Youtube kanál">
                     <h3 class="mb-4 text-2xl uppercase text-secondary">Youtube kanál</h3>
                     <a
@@ -32,7 +32,7 @@
                         </svg>
                     </a>
                 </section>
-
+   -->
                 @@include('./components/homepage/standings.html')
             </div>
 
