@@ -1,11 +1,11 @@
 <section class="bg-grey-60/25">
     <div class="container py-10">
-        <h3 class="mb-4 text-2xl uppercase text-secondary">Sociální sítě</h3>
+        <h3 class="mb-4 text-2xl uppercase text-secondary">Aktuality</h3>
         <div class="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             @@for(i = 0; i < 4; i++) {
             <div class="group">
                 <article>
-                    <a href="#" class="relative mb-4 overflow-hidden">
+                    <a href="#" class="relative mb-4 block overflow-hidden">
                         <img
                             class="aspect-[3/2] w-full object-cover transition-transform group-hover:scale-105"
                             src="https://picsum.photos/297/198"
@@ -56,6 +56,9 @@
                 </article>
             </div>
             }
+        </div>
+        <div class="flex justify-center">
+            <a class="btn" href="archive.html">Všechny aktuality</a>
         </div>
     </div>
 </section>

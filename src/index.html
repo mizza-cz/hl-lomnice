@@ -7,8 +7,8 @@
         @@include('./components/dialog.html') @@include('./components/header.html')
 
         <main>
-            @@include('./components/homepage/topstory.html') @@include('./components/homepage/more-articles.html')
-            @@include('./components/homepage/matches.html') @@include('./components/homepage/social-posts.html')
+            @@include('./components/homepage/topstory.html') @@include('./components/homepage/matches.html')
+            @@include('./components/homepage/more-articles.html') @@include('./components/homepage/aktuality.html')
 
             <section class="container my-10 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 lg:gap-6" aria-label="Bannery">
                 @@for(i = 0; i < 3; i++) {
@@ -18,25 +18,40 @@
                 }
             </section>
             <div class="container my-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-8">
-                <!-- 
-                <section class="lg:col-span-5" aria-label="Youtube kanál">
-                    <h3 class="mb-4 text-2xl uppercase text-secondary">Youtube kanál</h3>
-                    <a
-                        href="#"
-                        target="_blank"
-                        class="relative block aspect-video w-full before:absolute before:inset-0 before:z-1 before:h-full before:w-full before:bg-black/25 before:transition-opacity hover:before:opacity-20"
-                    >
-                        <img class="inset-0 h-full w-full object-cover" src="https://picsum.photos/618/348" width="618" height="348" alt="" />
-                        <svg width="64" height="64" class="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
-                            <use href="#youtube"></use>
-                        </svg>
-                    </a>
-                </section>
-   -->
-                @@include('./components/homepage/standings.html')
+                @@include('./components/homepage/standings.html') @@include('./components/homepage/youth.html')
+                <div class="lg:col-span-2">
+                    <h3 class="mb-4 text-2xl uppercase text-secondary">Sociální sítě</h3>
+                    <iframe
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhclomnice.cz&tabs=timeline&width=280&height=350&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                        width="280"
+                        height="350"
+                        style="border: none; overflow: hidden"
+                        scrolling="no"
+                        frameborder="0"
+                        allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    ></iframe>
+                </div>
+                 <div class="lg:col-span-2">
+                    <h3 class="mb-4 text-2xl uppercase text-secondary">Výsledky</h3>
+                    <pre><b>Krajská liga mužů Liberecký kraj</b>
+<b><u>Konečné pořadí play-off</b></u>
+<b>Mistr ligy a postup
+do kvalifikace o II. ligu
+HC Vlci Jablonec</b>
+<u>Další pořadí</u>
+2. Gepardi Jablonec
+3. HC Turnov 1931
+4. HC Česká Lípa
+5. HC Jičín
+<u>6. HC Lomnice n.P.</u>  
+7. HC Frýdlant
+8. HC TS Varnsdorf
+</pre>
+                </div>
             </div>
 
-            @@include('./components/homepage/youth.html') @@include('./components/homepage/partners.html')
+            @@include('./components/homepage/partners.html')
         </main>
 
         @@include('./components/footer.html')
