@@ -1,0 +1,1 @@
+const $targetEl=document.getElementById("tooltipContent"),$triggerEl=document.getElementById("tooltipButton"),options={placement:"bottom",triggerType:"hover",onHide:()=>{console.log("tooltip is shown")},onShow:()=>{console.log("tooltip is hidden")},onToggle:()=>{console.log("tooltip is toggled")}},instanceOptions={id:"tooltipContent",override:!0};
