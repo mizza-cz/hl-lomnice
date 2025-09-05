@@ -1,10 +1,11 @@
 <header class="sticky top-0 z-50">
     <div class="bg-secondary">
-        <ul class="container hidden py-4 text-white xl:flex xl:items-center xl:justify-end xl:gap-4">
+        <ul class="container hidden py-3 text-white xl:flex xl:items-center xl:justify-end xl:gap-4">
             <li>
                 <a href="https://rozpis.hclomnice.cz/" target="_blank" class="group relative flex items-center gap-2">
-                    <img src="./dist/img/rozpis.png" class="h-8 w-10 object-contain" alt="rozpis ledu" />
-
+                    <svg class="fill-white" width="32" height="32">
+                        <use href="#rozpis"></use>
+                    </svg>
                     <span
                         class="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 whitespace-nowrap rounded bg-white px-2 py-1 text-sm text-primary opacity-0 transition-opacity group-hover:opacity-100"
                     >
@@ -13,9 +14,10 @@
                 </a>
             </li>
             <li>
-                <a href="https://rozpis.hclomnice.cz/" target="_blank" class="group relative flex items-center gap-2">
-                    <img src="./dist/img/webcam.png" class="h-8 w-8 object-contain" alt="webcam" />
-
+                <a href="https://www.youtube.com/watch?v=ehaErII8Gqg" target="_blank" class="group relative flex items-center gap-2">
+                    <svg class="fill-white" width="32" height="32">
+                        <use href="#webcam"></use>
+                    </svg>
                     <span
                         class="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 whitespace-nowrap rounded bg-white px-2 py-1 text-sm text-primary opacity-0 transition-opacity group-hover:opacity-100"
                     >
@@ -24,9 +26,10 @@
                 </a>
             </li>
             <li>
-                <a href="https://rozpis.hclomnice.cz/" target="_blank" class="group relative flex items-center gap-2">
-                    <img src="./dist/img/facebook.png" class="h-8 w-8 object-contain" alt="webcam" />
-
+                <a href="https://www.facebook.com/hclomnice.cz" target="_blank" class="group relative flex items-center gap-2">
+                    <svg class="fill-white" width="32" height="32">
+                        <use href="#facebook2"></use>
+                    </svg>
                     <span
                         class="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 whitespace-nowrap rounded bg-white px-2 py-1 text-sm text-primary opacity-0 transition-opacity group-hover:opacity-100"
                     >
@@ -35,9 +38,10 @@
                 </a>
             </li>
             <li>
-                <a href="https://rozpis.hclomnice.cz/" target="_blank" class="group relative flex items-center gap-2">
-                    <img src="./dist/img/instagram.png" class="h-8 w-8 object-contain" alt="webcam" />
-
+                <a href="https://www.instagram.com/hc_lomnice1920" target="_blank" class="group relative flex items-center gap-2">
+                    <svg class="fill-white" width="32" height="32">
+                        <use href="#instagram2"></use>
+                    </svg>
                     <span
                         class="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 whitespace-nowrap rounded bg-white px-2 py-1 text-sm text-primary opacity-0 transition-opacity group-hover:opacity-100"
                     >
@@ -46,14 +50,13 @@
                 </a>
             </li>
             <li>
-                <a href="https://eu.zonerama.com/HCLomnice" target="_blank" class="group relative block w-fit">
-                    <svg class="fill-white" width="32" height="32">
-                        <use href="#zonerama"></use>
+                <a href="https://eu.zonerama.com/HCLomnice/1065569" target="_blank" class="group relative block w-fit">
+                    <svg class="fill-white" width="36" height="36">
+                        <use href="#camera"></use>
                     </svg>
 
-                    
                     <span
-                        class="bg-white pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 whitespace-nowrap rounded px-2 py-1 text-sm text-primary opacity-0 transition-opacity group-hover:opacity-100"
+                        class="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 whitespace-nowrap rounded bg-white px-2 py-1 text-sm text-primary opacity-0 transition-opacity group-hover:opacity-100"
                     >
                         Zonerama
                     </span>
@@ -200,20 +203,42 @@
                             <li class="dropdown-menu-item"><a class="dropdown-menu-link" href="#"> KIS registrace člena </a></li>
                         </ul>
                     </li>
-                    <li class="menu-item text-white xl:hidden">
-                        <a href="https://rozpis.hclomnice.cz/" target="_blank" class="menu-link"> Rozpis ledu </a>
+                </ul>
+                <ul class="relative mt-8 flex items-center justify-center gap-1 text-white xl:hidden">
+                    <li>
+                        <a target="_blank" href="https://rozpis.hclomnice.cz/">
+                            <svg class="fill-white" width="32" height="32">
+                                <use href="#rozpis"></use>
+                            </svg>
+                        </a>
                     </li>
-                    <li class="menu-item text-white xl:hidden">
-                        <a href="https://www.youtube.com/watch?v=ehaErII8Gqg" target="_blank" class="menu-link"> Webkamera</a>
+                    <li>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=ehaErII8Gqg">
+                            <svg class="fill-white" width="32" height="32">
+                                <use href="#webcam"></use>
+                            </svg>
+                        </a>
                     </li>
-                    <li class="menu-item text-white xl:hidden">
-                        <a href="https://www.facebook.com/hclomnice.cz" target="_blank" class="menu-link"> Facebook</a>
+                    <li>
+                        <a href="https://www.facebook.com/hclomnice.cz" target="_blank">
+                            <svg class="fill-white" width="32" height="32">
+                                <use href="#facebook2"></use>
+                            </svg>
+                        </a>
                     </li>
-                    <li class="menu-item text-white xl:hidden">
-                        <a href="https://www.instagram.com/hc_lomnice1920" target="_blank" class="menu-link"> Instagram</a>
+                    <li>
+                        <a href="https://www.instagram.com/hc_lomnice1920" target="_blank">
+                            <svg class="fill-white" width="32" height="32">
+                                <use href="#instagram2"></use>
+                            </svg>
+                        </a>
                     </li>
-                    <li class="menu-item text-white xl:hidden">
-                        <a href="https://eu.zonerama.com/HCLomnice" target="_blank" class="menu-link">Zonerama </a>
+                    <li>
+                        <a href="https://eu.zonerama.com/HCLomnice/1065569" target="_blank">
+                            <svg class="fill-white" width="36" height="36">
+                                <use href="#camera"></use>
+                            </svg>
+                        </a>
                     </li>
                 </ul>
             </nav>
